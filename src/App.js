@@ -1,22 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import BtnMain from './components/Button';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
-function App() {
+// function App()
+const App = () => {
+  const navText = "Salsa";
+  const clik = () => {
+    return alert("Selamat anda sudah muncul");
+  }
+
   return (
     <div className="App">
       <header className="App-header">
+        <Navbar navText={navText} />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Okeyy <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <BtnMain clik={clik} />
+        <Footer />
       </header>
     </div>
   );
